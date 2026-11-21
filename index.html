@@ -5,7 +5,7 @@
 :root{--g:#155b43;--d:#103f31;--gold:#e6b84a;--bg:#f3f7f4;--ink:#1c2b25;--muted:#68776f;--line:#dce7df;--good:#18794e;--bad:#b74444}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 header{background:linear-gradient(135deg,var(--d),var(--g));color:white;text-align:center;padding:28px 16px 38px}.brand{font-size:11px;letter-spacing:2px;font-weight:800;color:#f3d98d}h1{font-size:clamp(27px,5vw,40px);margin:8px 0 5px}.sub{margin:0;color:#e4eee8}
-.wrap{max-width:940px;padding:0 15px;margin:-18px auto 40px;position:relative}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 25px #153d2810}
+.wrap{max-width:940px;padding:0 15px;margin:-18px auto 40px;position:relative}.landing{text-align:center;padding:30px 24px}.home-icon{font-family:"Noto Naskh Arabic","Amiri","Traditional Arabic",serif;font-size:44px;color:var(--g);background:#f1f8f3;border:1px solid var(--line);border-radius:16px;max-width:260px;margin:0 auto 18px;padding:12px}.home-desc{max-width:650px;margin:0 auto;color:var(--muted);line-height:1.65}.home-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:650px;margin:24px auto}.home-highlights div{background:#f4f8f5;border-radius:13px;padding:14px}.home-highlights b{display:block;color:var(--g);font-size:24px}.home-highlights span{font-size:12px;color:var(--muted)}.home-settings{max-width:520px;margin:22px auto;display:grid;grid-template-columns:1fr 1fr;gap:9px;text-align:left}.home-settings label{font-size:13px;font-weight:800;color:var(--muted)}.home-settings select{width:100%}.start-btn{min-width:220px;font-size:16px!important;padding:15px 24px!important}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 25px #153d2810}
 .toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.pill{background:#eaf3ed;color:var(--g);padding:7px 11px;border-radius:30px;font-size:12px;font-weight:800}
 select{border:1px solid var(--line);border-radius:10px;padding:9px;background:#fff;color:var(--ink);font:inherit}
 .progress{height:8px;background:#e8eee9;border-radius:20px;overflow:hidden;margin:16px 0 20px}.bar{height:100%;width:0;background:linear-gradient(90deg,#1b7958,var(--gold));transition:.2s}
@@ -13,18 +13,40 @@ select{border:1px solid var(--line);border-radius:10px;padding:9px;background:#f
 h2{font-size:20px;line-height:1.5;margin:12px 0}.arabic{font-family:"Noto Naskh Arabic","Amiri","Traditional Arabic",serif;font-size:clamp(29px,6vw,40px);line-height:1.9;text-align:center;direction:rtl;background:#f5faf6;border:1px solid var(--line);border-radius:14px;padding:12px;margin:15px 0}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.option{border:1.5px solid var(--line);background:white;border-radius:12px;padding:13px;text-align:left;font:inherit;cursor:pointer;min-height:58px;line-height:1.45}.option:hover:not(:disabled){border-color:var(--g);background:#f7fbf8}.letter{display:inline-grid;place-items:center;width:27px;height:27px;border-radius:8px;background:#edf4ef;color:var(--g);font-weight:800;margin-right:8px}.option.correct{border-color:var(--good);background:#eaf7ef}.option.wrong{border-color:var(--bad);background:#fff0f0}.option:disabled{cursor:default;color:var(--ink);opacity:1}
 .feedback{display:none;margin-top:15px;padding:13px;border-radius:12px;background:#f2f8f4;border-left:4px solid var(--g);line-height:1.55}.feedback.show{display:block}
-.actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px}button.primary,button.secondary{border:0;border-radius:11px;padding:12px 17px;font-weight:800;cursor:pointer;font-size:14px}.primary{background:var(--g);color:white}.primary:disabled{opacity:.4;cursor:not-allowed}.secondary{background:#edf3ef;color:var(--g)}
+.actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px}.nav-actions{flex-wrap:wrap}.nav-actions button{flex:1;min-width:125px}button.primary,button.secondary{border:0;border-radius:11px;padding:12px 17px;font-weight:800;cursor:pointer;font-size:14px}.primary{background:var(--g);color:white}.primary:disabled{opacity:.4;cursor:not-allowed}.secondary{background:#edf3ef;color:var(--g)}
 .result{display:none;text-align:center}.result.show{display:block}.score{font-size:58px;font-weight:900;color:var(--g);margin:12px 0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:18px 0}.stat{background:#f5f8f6;border-radius:12px;padding:12px}.stat b{display:block;font-size:22px;color:var(--g)}.review{text-align:left;margin-top:20px}.review-item{padding:12px 0;border-bottom:1px solid var(--line)}.review-item:last-child{border:0}.result-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0}.result-actions button{min-width:145px}.small{font-size:12px;color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:12px;padding:0 15px 28px}
 @media(max-width:620px){.options{grid-template-columns:1fr}.panel{padding:15px}.actions button{flex:1}.stats{grid-template-columns:1fr 1fr}}
 </style></head><body>
-<header><div class="brand">FERSUS • GAMES & EDUCATION</div><h1>Arabic Quest V6</h1><p class="sub">Grand Arabic Challenge — Gabungan Materi V1–V5</p></header>
+<header><div class="brand">FERSUS • GAMES & EDUCATION</div><h1>Arabic Quest V6</h1><p class="sub">Grand Arabic Challenge — Uji Kemampuan Bahasa Arab</p></header>
 <main class="wrap">
-<section class="panel" id="game">
-<div class="toolbar"><span class="pill">GRAND CHALLENGE • BANK CAMPURAN</span><div><select id="level"><option value="Semua">Semua Jenjang</option><option>SD</option><option>SMP</option><option>SMA</option><option>Umum</option></select> <select id="count"><option value="10">10 Soal</option><option value="20">20 Soal</option><option value="30">30 Soal</option><option value="50">50 Soal</option><option value="100">100 Soal</option><option value="150">150 Soal</option></select></div></div>
+<section class="panel landing" id="home">
+ <div class="home-icon">اَلْعَرَبِيَّةُ</div>
+ <span class="pill">FERSUS • GAMES & EDUCATION</span>
+ <h2>Selamat Datang di Arabic Quest!</h2>
+ <p class="home-desc">Uji kemampuan Bahasa Arabmu melalui rangkaian tantangan menyeluruh. Pelajari kosakata, percakapan, kata ganti, kata kerja, tata bahasa, dan penyusunan kalimat.</p>
+ <div class="home-highlights">
+  <div><b>155</b><span>Bank soal</span></div>
+  <div><b>4</b><span>Jenjang belajar</span></div>
+  <div><b>Lengkap</b><span>Materi pembelajaran</span></div>
+ </div>
+ <div class="home-settings">
+  <label for="level">Pilih jenjang</label>
+  <select id="level"><option value="Semua">Semua Jenjang</option><option>SD</option><option>SMP</option><option>SMA</option><option>Umum</option></select>
+  <label for="theme">Pilih tema</label>
+  <select id="theme"><option value="Semua">Semua Tema</option><option value="Angka">Angka</option><option value="Arah">Arah</option><option value="Bantuan">Bantuan</option><option value="Belanja">Belanja</option><option value="Fi'il">Fi'il</option><option value="Fi'il amr">Fi'il amr</option><option value="Fi'il māḍī">Fi'il māḍī</option><option value="Fungsi kalimat">Fungsi kalimat</option><option value="Hewan">Hewan</option><option value="Huruf">Huruf</option><option value="Identitas">Identitas</option><option value="Isim">Isim</option><option value="Isim isyarah">Isim isyarah</option><option value="Jumlah fi'liyah">Jumlah fi'liyah</option><option value="Jumlah ismiyah">Jumlah ismiyah</option><option value="Kaidah">Kaidah</option><option value="Kata ganti">Kata ganti</option><option value="Keluarga">Keluarga</option><option value="Makanan">Makanan</option><option value="Pembagian kalimah">Pembagian kalimah</option><option value="Perkenalan">Perkenalan</option><option value="Salam">Salam</option><option value="Sapaan">Sapaan</option><option value="Sifat">Sifat</option><option value="Tempat">Tempat</option><option value="Tubuh">Tubuh</option><option value="Waktu">Waktu</option><option value="Warna">Warna</option></select>
+  <label for="count">Jumlah soal</label>
+  <select id="count"><option value="10">10 Soal</option><option value="20">20 Soal</option><option value="30">30 Soal</option><option value="50">50 Soal</option><option value="100">100 Soal</option><option value="150">150 Soal</option></select>
+ </div>
+ <p class="small" id="availableCount">Tersedia 155 soal dari semua tema.</p>
+ <button class="primary start-btn" id="startBtn">Mulai Kuis →</button>
+ <p class="small">Soal dan pilihan jawaban akan diacak setiap kali sesi dimulai.</p>
+</section>
+<section class="panel" id="game" hidden>
+<div class="toolbar"><span class="pill">GRAND CHALLENGE • BANK CAMPURAN</span><button class="secondary" id="homeFromGame" type="button">⌂ Menu Utama</button></div>
 <div class="progress"><div class="bar" id="bar"></div></div><div class="meta"><span id="counter"></span><span>•</span><span id="kind"></span><span>•</span><span id="topic"></span><span>•</span><span id="levelMeta"></span></div>
 <h2 id="question"></h2><div class="arabic" id="arabic" hidden></div><div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div>
-<div class="actions"><button class="secondary" id="restart">Mulai Ulang</button><button class="primary" id="next" disabled>Berikutnya →</button></div>
-<p class="small">Materi dicampur dan diacak dari kosakata, percakapan, dhamir, kata tunjuk, fi'il, huruf jar, Nahwu, serta susunan kalimat.</p>
+<div class="actions nav-actions"><button class="secondary" id="prev" type="button" disabled>← Sebelumnya</button><button class="secondary" id="endSession" type="button">Akhiri Sesi</button><button class="secondary" id="restart" type="button">Mulai Ulang</button><button class="primary" id="next" disabled>Berikutnya →</button></div>
+<p class="small">Materi dicampur dan diacak dari kosakata, percakapan, kata ganti, kata tunjuk, kata kerja, tata bahasa, serta susunan kalimat.</p>
 </section>
 <section class="panel result" id="result"><span class="pill">HASIL GRAND CHALLENGE</span><h2 id="resultTitle">Selesai!</h2><div class="score" id="score">0/10</div><p id="resultText"></p><div class="stats"><div class="stat"><b id="correctStat">0</b><span>Benar</span></div><div class="stat"><b id="wrongStat">0</b><span>Perlu latihan</span></div><div class="stat"><b id="percentStat">0%</b><span>Nilai</span></div></div><div class="result-actions"><button class="secondary" id="backBtn" type="button">← Kembali</button><button class="secondary" id="homeBtn" type="button">⌂ Menu Utama</button><button class="primary" id="again">Tantang Lagi ↻</button></div><div class="review" id="review"></div></section>
 </main><footer>Arabic Quest • FERSUS Games & Education</footer>
@@ -33,32 +55,99 @@ const bank=[{"level": "SD", "cat": "Kosakata", "topic": "Isim", "kind": "Makna k
 let session=[],pos=0,score=0,locked=false,history=[];
 const $=id=>document.getElementById(id);
 function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function getPool(){
+ const level=$("level").value,theme=$("theme").value;
+ return bank.filter(q=>(level==="Semua"||q.level===level)&&(theme==="Semua"||q.topic===theme));
+}
+function updateAvailable(){
+ const pool=getPool();
+ $("availableCount").textContent=`Tersedia ${pool.length} soal untuk kombinasi jenjang dan tema yang dipilih.`;
+}
 function start(){
- let level=$("level").value,n=+$("count").value,pool=bank.filter(q=>level==="Semua"||q.level===level);
- session=shuffle(pool).slice(0,Math.min(n,pool.length));pos=0;score=0;locked=false;history=[];
- $("game").style.display="block";$("result").classList.remove("show");render();
+ let n=+$("count").value,pool=getPool();
+ if(!pool.length){
+  $("availableCount").textContent="Belum ada soal untuk kombinasi jenjang dan tema ini. Silakan pilih jenjang atau tema lain.";
+  return;
+ }
+ session=shuffle(pool).slice(0,Math.min(n,pool.length)).map(q=>({...q,choice:null}));
+ pos=0;score=0;locked=false;history=[];
+ $("home").style.display="none";$("game").hidden=false;$("game").style.display="block";$("result").classList.remove("show");render();
+}
+function showHome(){
+ $("game").style.display="none";$("game").hidden=true;$("result").classList.remove("show");$("home").style.display="block";
+ window.scrollTo({top:0,behavior:"smooth"});
 }
 function render(){
- let q=session[pos];locked=false;$("counter").textContent=`Soal ${pos+1}/${session.length}`;$("kind").textContent=q.kind;$("topic").textContent=q.topic;$("levelMeta").textContent=q.level;$("bar").style.width=`${pos/session.length*100}%`;
- $("question").textContent=q.q;$("arabic").textContent=q.ar||"";$("arabic").hidden=!q.ar;$("feedback").className="feedback";$("feedback").textContent="";$("next").disabled=true;$("next").textContent=pos===session.length-1?"Lihat Hasil":"Berikutnya →";
- let box=$("options");box.innerHTML="";q.opts.forEach((text,i)=>{let b=document.createElement("button");b.className="option";let l=document.createElement("span");l.className="letter";l.textContent="ABCD"[i];b.append(l,document.createTextNode(text));b.onclick=()=>answer(i);box.append(b)});
+ let q=session[pos];locked=q.choice!==null;
+ $("counter").textContent=`Soal ${pos+1}/${session.length}`;$("kind").textContent=q.kind;$("topic").textContent=q.topic;$("levelMeta").textContent=q.level;$("bar").style.width=`${(pos+(locked?1:0))/session.length*100}%`;
+ $("question").textContent=q.q;$("arabic").textContent=q.ar||"";$("arabic").hidden=!q.ar;
+ $("feedback").className="feedback";$("feedback").textContent="";
+ $("prev").disabled=pos===0;
+ $("next").disabled=!locked;
+ $("next").textContent=pos===session.length-1?"Lihat Hasil":"Berikutnya →";
+ let box=$("options");box.innerHTML="";
+ q.opts.forEach((text,i)=>{
+   let b=document.createElement("button");b.className="option";
+   let l=document.createElement("span");l.className="letter";l.textContent="ABCD"[i];
+   b.append(l,document.createTextNode(text));
+   if(locked){b.disabled=true;if(i===q.ans)b.classList.add("correct");if(i===q.choice&&i!==q.ans)b.classList.add("wrong")}
+   else b.onclick=()=>answer(i);
+   box.append(b);
+ });
+ if(locked){
+   $("feedback").textContent=(q.choice===q.ans?"Tepat! ":"Belum tepat. ")+q.ex;
+   $("feedback").classList.add("show");
+ }
 }
 function answer(i){
- if(locked)return;locked=true;let q=session[pos],ok=i===q.ans;if(ok)score++;
- [...$("options").children].forEach((b,j)=>{b.disabled=true;if(j===q.ans)b.classList.add("correct");else if(j===i)b.classList.add("wrong")});
- $("feedback").textContent=(ok?"Tepat! ":"Belum tepat. ")+q.ex;$("feedback").classList.add("show");$("next").disabled=false;$("bar").style.width=`${(pos+1)/session.length*100}%`;
- history.push({q,ok,chosen:q.opts[i],correct:q.opts[q.ans]});
+ if(locked)return;
+ let q=session[pos];q.choice=i;locked=true;
+ [...$("options").children].forEach((b,j)=>{
+   b.disabled=true;if(j===q.ans)b.classList.add("correct");
+   else if(j===i)b.classList.add("wrong");
+ });
+ $("feedback").textContent=(i===q.ans?"Tepat! ":"Belum tepat. ")+q.ex;
+ $("feedback").classList.add("show");
+ $("next").disabled=false;$("prev").disabled=pos===0;
+ $("bar").style.width=`${(pos+1)/session.length*100}%`;
 }
 function finish(){
- $("game").style.display="none";$("result").classList.add("show");let pct=Math.round(score/session.length*100),wrong=session.length-score;
- $("score").textContent=`${score}/${session.length}`;$("correctStat").textContent=score;$("wrongStat").textContent=wrong;$("percentStat").textContent=pct+"%";
- $("resultTitle").textContent=pct>=90?"Luar biasa!":pct>=75?"Hebat, terus tingkatkan!":pct>=60?"Bagus, terus berlatih!":"Jangan menyerah, coba lagi!";
- $("resultText").textContent=`Kamu menyelesaikan ${session.length} soal dari bank campuran Arabic Quest V1–V5.`;
- $("review").innerHTML="<h3>Ulasan Jawaban</h3>";history.forEach((x,i)=>{let d=document.createElement("div");d.className="review-item";let h=document.createElement("strong");h.textContent=`${i+1}. ${x.ok?"✓ ":"✗ "}${x.q.topic} — ${x.q.kind}`;let p=document.createElement("p");p.textContent=x.q.q;let s=document.createElement("span");s.className="small";s.textContent=`Jawaban benar: ${x.correct}`;d.append(h,p,s);$("review").append(d)});
+ const answered=session.filter(q=>q.choice!==null);
+ const correct=answered.filter(q=>q.choice===q.ans).length;
+ const incorrect=answered.length-correct;
+ const unanswered=session.length-answered.length;
+ const pct=answered.length?Math.round(correct/answered.length*100):0;
+ $("game").style.display="none";$("result").classList.add("show");
+ $("score").textContent=`${correct}/${answered.length}`;
+ $("correctStat").textContent=correct;
+ $("wrongStat").textContent=incorrect;
+ $("percentStat").textContent=pct+"%";
+ $("resultTitle").textContent=pct>=90?"Luar biasa!":pct>=75?"Hebat, terus tingkatkan!":pct>=60?"Bagus, terus berlatih!":"Terus semangat belajar!";
+ $("resultText").textContent=`Kamu menjawab ${answered.length} dari ${session.length} soal. ${unanswered} soal belum dijawab. Nilai dihitung dari soal yang sudah dijawab.`;
+ $("review").innerHTML="<h3>Ulasan Jawaban</h3>";
+ session.forEach((q,i)=>{
+   let d=document.createElement("div");d.className="review-item";
+   let h=document.createElement("strong");
+   h.textContent=`${i+1}. ${q.choice===null?"— Belum dijawab":q.choice===q.ans?"✓ Benar":"✗ Perlu diperbaiki"} — ${q.topic} / ${q.kind}`;
+   let p=document.createElement("p");p.textContent=q.q;
+   let s=document.createElement("span");s.className="small";
+   s.textContent=`Jawaban benar: ${q.opts[q.ans]}${q.choice===null?" • Belum dijawab":""}`;
+   d.append(h,p,s);$("review").append(d);
+ });
+}
+function endSession(){
+ if(!confirm("Akhiri sesi sekarang? Jawaban yang sudah dipilih akan disimpan, sedangkan soal yang belum dijawab akan ditandai belum dijawab."))return;
+ finish();
 }
 $("next").onclick=()=>{if(!locked)return;if(pos<session.length-1){pos++;render()}else finish()};
-$("restart").onclick=start;$("again").onclick=start;
-$("backBtn").onclick=()=>{if(window.history.length>1){window.history.back()}else{window.location.href="https://www.ferisusanto.com/p/games-dan-edukasi.html"}};
+$("prev").onclick=()=>{if(pos>0){pos--;render()}};
+$("endSession").onclick=endSession;
+$("restart").onclick=()=>{if(confirm("Mulai ulang sesi? Progres sesi saat ini akan dihapus."))start()};
+$("again").onclick=start;
+$("backBtn").onclick=showHome;
 $("homeBtn").onclick=()=>{window.location.href="https://www.ferisusanto.com/p/games-dan-edukasi.html"};
-$("level").onchange=start;$("count").onchange=start;start();
+$("startBtn").onclick=start;
+$("level").onchange=updateAvailable;$("theme").onchange=updateAvailable;
+$("homeFromGame").onclick=showHome;
+$("home").style.display="block";updateAvailable();$("game").hidden=true;$("game").style.display="none";$("result").classList.remove("show");
 </script></body></html>
